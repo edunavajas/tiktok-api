@@ -6,7 +6,7 @@ services:
       context: ./api
     container_name: tiktok-downloader-api
     ports:
-      - "8006:8000"
+      - "8006:8006"
     volumes:
       - ./logs:/app/logs
       - ./temp_videos:/app/temp_videos
