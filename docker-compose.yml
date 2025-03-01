@@ -3,8 +3,7 @@ version: '3.8'
 services:
   tiktok-downloader-api:
     build: 
-      context: .
-      dockerfile: Dockerfile
+      context: ./api
     container_name: tiktok-downloader-api
     ports:
       - "8006:8000"
