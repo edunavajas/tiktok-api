@@ -14,7 +14,6 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("tiktok_downloader.log"),
         logging.StreamHandler()
     ]
 )
@@ -469,4 +468,4 @@ async def download_v3(url: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8008)
+    uvicorn.run(app, host="0.0.0.0", port=8006)
