@@ -1,0 +1,232 @@
+2025-03-01 19:22:44,917 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:22:48,254 - tiktok_downloader - INFO - Received download request for URL: https://www.tiktok.com/@tiktok_es/video/7471301316271295766?lang=es
+2025-03-01 19:22:48,254 - tiktok_downloader - INFO - Trying download method: download_v2
+2025-03-01 19:22:48,254 - tiktok_downloader - INFO - Starting v2 download method for URL: https://www.tiktok.com/@tiktok_es/video/7471301316271295766?lang=es
+2025-03-01 19:22:48,254 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@tiktok_es/video/7471301316271295766?lang=es
+2025-03-01 19:22:48,301 - tiktok_downloader - INFO - Extracted username: @tiktok_es
+2025-03-01 19:22:48,301 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7471301316271295766
+2025-03-01 19:22:48,301 - tiktok_downloader - DEBUG - Making initial request to musicaldown.com
+2025-03-01 19:22:48,304 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): musicaldown.com:443
+2025-03-01 19:22:48,485 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "GET /en HTTP/1.1" 200 None
+2025-03-01 19:22:48,505 - tiktok_downloader - DEBUG - Obtained tokens: _vSb, _pCQsj=3227d25c4c0ba0403ff50a27bbf68379
+2025-03-01 19:22:48,505 - tiktok_downloader - DEBUG - Submitting URL to musicaldown.com: https://www.tiktok.com/@tiktok_es/video/7471301316271295766?lang=es
+2025-03-01 19:22:49,043 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "POST /download HTTP/1.1" 200 None
+2025-03-01 19:22:49,064 - tiktok_downloader - DEBUG - Found download link using selector /html/body/div[2]/div/div[2]/div[2]/a[1]/@href: https://fastdl.muscdn.app/dGlrdG9rX2Vz/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81M2IyNDE1YjMxOTg2MTYyMWE5NGE3OGE4YTc2Y2Y1NS82N2MzYTgyZi92aWRlby90b3Mvbm8xYS90b3Mtbm8xYS12ZS0wMDY4YzAwMS1uby9vOGlJZ0VacUFBZjlzdWduTUZmclllRE0zcXZrREVpZnBTRWZSdi8/YT0wJmJ0aT1PVUJ6T1RnN1FHbzZPalpBTDNBakxUQXpZQ014TkROZyZjaD0wJmNyPTAmZHI9MCZlcj0wJmxyPWFsbCZuZXQ9MCZjZD0wJTdDMCU3QzAlN0MwJmN2PTEmYnI9MjA2MiZidD0xMDMxJmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI1TldtSjN3VWNvfnlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1OV1V6Tkdjek9EYzZhRGhuTkRVNU8wQnBham84YjJvNWNubHdlRE16Ynpjek5VQmpOalF6TURBd1h6TXhNRFl2WXk5ZllTTXVjMkJmTW1Sek5HdGdMUzFrTVRGemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgyMjU5RTMzNjE0MDcwNzJBNTU5MkU5RkImYnRhZz1lMDAwYTgwMDA=
+2025-03-01 19:22:49,064 - tiktok_downloader - DEBUG - Downloading video from: https://fastdl.muscdn.app/dGlrdG9rX2Vz/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81M2IyNDE1YjMxOTg2MTYyMWE5NGE3OGE4YTc2Y2Y1NS82N2MzYTgyZi92aWRlby90b3Mvbm8xYS90b3Mtbm8xYS12ZS0wMDY4YzAwMS1uby9vOGlJZ0VacUFBZjlzdWduTUZmclllRE0zcXZrREVpZnBTRWZSdi8/YT0wJmJ0aT1PVUJ6T1RnN1FHbzZPalpBTDNBakxUQXpZQ014TkROZyZjaD0wJmNyPTAmZHI9MCZlcj0wJmxyPWFsbCZuZXQ9MCZjZD0wJTdDMCU3QzAlN0MwJmN2PTEmYnI9MjA2MiZidD0xMDMxJmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI1TldtSjN3VWNvfnlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1OV1V6Tkdjek9EYzZhRGhuTkRVNU8wQnBham84YjJvNWNubHdlRE16Ynpjek5VQmpOalF6TURBd1h6TXhNRFl2WXk5ZllTTXVjMkJmTW1Sek5HdGdMUzFrTVRGemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgyMjU5RTMzNjE0MDcwNzJBNTU5MkU5RkImYnRhZz1lMDAwYTgwMDA=
+2025-03-01 19:22:49,066 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): fastdl.muscdn.app:443
+2025-03-01 19:22:49,651 - urllib3.connectionpool - DEBUG - https://fastdl.muscdn.app:443 "GET /dGlrdG9rX2Vz/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81M2IyNDE1YjMxOTg2MTYyMWE5NGE3OGE4YTc2Y2Y1NS82N2MzYTgyZi92aWRlby90b3Mvbm8xYS90b3Mtbm8xYS12ZS0wMDY4YzAwMS1uby9vOGlJZ0VacUFBZjlzdWduTUZmclllRE0zcXZrREVpZnBTRWZSdi8/YT0wJmJ0aT1PVUJ6T1RnN1FHbzZPalpBTDNBakxUQXpZQ014TkROZyZjaD0wJmNyPTAmZHI9MCZlcj0wJmxyPWFsbCZuZXQ9MCZjZD0wJTdDMCU3QzAlN0MwJmN2PTEmYnI9MjA2MiZidD0xMDMxJmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI1TldtSjN3VWNvfnlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1OV1V6Tkdjek9EYzZhRGhuTkRVNU8wQnBham84YjJvNWNubHdlRE16Ynpjek5VQmpOalF6TURBd1h6TXhNRFl2WXk5ZllTTXVjMkJmTW1Sek5HdGdMUzFrTVRGemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgyMjU5RTMzNjE0MDcwNzJBNTU5MkU5RkImYnRhZz1lMDAwYTgwMDA= HTTP/1.1" 200 111453004
+2025-03-01 19:22:49,652 - tiktok_downloader - DEBUG - Video content length: 111453004 bytes
+2025-03-01 19:22:49,652 - tiktok_downloader - INFO - Successfully downloaded video using v2 method, returning 111453004 bytes
+2025-03-01 19:32:40,215 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:32:42,681 - tiktok_downloader - INFO - Received download request for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:32:42,681 - tiktok_downloader - INFO - Trying download method: download_v2
+2025-03-01 19:32:42,682 - tiktok_downloader - INFO - Starting v2 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:32:42,682 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:32:42,682 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:32:42,682 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:32:42,682 - tiktok_downloader - DEBUG - Making initial request to musicaldown.com
+2025-03-01 19:32:42,685 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): musicaldown.com:443
+2025-03-01 19:32:42,982 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "GET /en HTTP/1.1" 200 None
+2025-03-01 19:32:42,999 - tiktok_downloader - DEBUG - Obtained tokens: _HNo, _zKFIx=d43f9437b8216f636abbd0af1372a2f6
+2025-03-01 19:32:42,999 - tiktok_downloader - DEBUG - Submitting URL to musicaldown.com: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:32:43,702 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "POST /download HTTP/1.1" 200 None
+2025-03-01 19:32:43,707 - tiktok_downloader - DEBUG - Found download link using selector /html/body/div[2]/div/div[2]/div[2]/a[1]/@href: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81NTc4ZjU3MTNlYTFlYmM2YmE1MTBhMjEwZWNjN2Y4NC82N2MzYTc0OS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJmQ1dtSjN3VThNWXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzMjU0NEFDN0JGQzAwQkFGNkE5QkUwRTAmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:32:43,707 - tiktok_downloader - DEBUG - Downloading video from: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81NTc4ZjU3MTNlYTFlYmM2YmE1MTBhMjEwZWNjN2Y4NC82N2MzYTc0OS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJmQ1dtSjN3VThNWXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzMjU0NEFDN0JGQzAwQkFGNkE5QkUwRTAmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:32:43,709 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): fastdl.muscdn.app:443
+2025-03-01 19:32:44,096 - urllib3.connectionpool - DEBUG - https://fastdl.muscdn.app:443 "GET /YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC81NTc4ZjU3MTNlYTFlYmM2YmE1MTBhMjEwZWNjN2Y4NC82N2MzYTc0OS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJmQ1dtSjN3VThNWXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzMjU0NEFDN0JGQzAwQkFGNkE5QkUwRTAmYnRhZz1lMDAwYjgwMDA= HTTP/1.1" 200 1450877
+2025-03-01 19:32:44,096 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:32:44,096 - tiktok_downloader - INFO - Successfully downloaded video using v2 method, returning 1450877 bytes
+2025-03-01 19:33:16,487 - tiktok_downloader - INFO - Starting v1 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:16,487 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:16,488 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:33:16,488 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:33:16,488 - tiktok_downloader - DEBUG - Making initial request to tmate.cc
+2025-03-01 19:33:16,489 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tmate.cc:443
+2025-03-01 19:33:16,766 - urllib3.connectionpool - DEBUG - https://tmate.cc:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:33:16,778 - tiktok_downloader - DEBUG - Obtained token: dd789648992c887e3961dcdff33d8dcf
+2025-03-01 19:33:16,779 - tiktok_downloader - DEBUG - Submitting URL to tmate.cc: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:17,318 - urllib3.connectionpool - DEBUG - https://tmate.cc:443 "POST /action HTTP/1.1" 200 None
+2025-03-01 19:33:17,320 - tiktok_downloader - DEBUG - Found download link: https://tikcdn.app/2LHYsdii2KLaqtmK2LIgfCDwnZCR8J2QgPCdkIrwnZCE8J2QmfCfpoc=/dl/aHR0cHM6Ly92NDUudGlrdG9rY2RuLWV1LmNvbS82NTJjNzk0N2RhOTZjODEzZjNiNjVmMzMzZWQwMTcwYi82N2M0YTQ4Yi92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MTIzMyZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0xMyZkcj0wJmVyPTAmbHI9YWxsJm5ldD0wJmNkPTAlN0MwJTdDMCU3QyZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1wZkV0R012dDhabW8wMXV6eWI0alZnX0Y0NjFyS3NkLiZtaW1lX3R5cGU9dmlkZW9fbXA0JnFzPTAmcmM9TzJabU9XZGxPalEyT21abWFXbHBOMEJwTXpwcGRYTTVjblJwZURNemFUY3pORUEyWGpKZ0xXRXRYakF4TkdGaVkyTmhZU05qY1dCak1tUmpZbTFnTFMxa01USnpjdyUzRCUzRCZ2dnBsPTEmbD0yMDI1MDMwMjAyMzMyOTA5QUI4MUZGNkQ3NkI0NERFN0FFJmJ0YWc9ZTAwMGJkMDAw
+2025-03-01 19:33:17,320 - tiktok_downloader - DEBUG - Downloading video content
+2025-03-01 19:33:17,322 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tikcdn.app:443
+2025-03-01 19:33:17,926 - urllib3.connectionpool - DEBUG - https://tikcdn.app:443 "GET /2LHYsdii2KLaqtmK2LIgfCDwnZCR8J2QgPCdkIrwnZCE8J2QmfCfpoc=/dl/aHR0cHM6Ly92NDUudGlrdG9rY2RuLWV1LmNvbS82NTJjNzk0N2RhOTZjODEzZjNiNjVmMzMzZWQwMTcwYi82N2M0YTQ4Yi92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MTIzMyZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0xMyZkcj0wJmVyPTAmbHI9YWxsJm5ldD0wJmNkPTAlN0MwJTdDMCU3QyZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1wZkV0R012dDhabW8wMXV6eWI0alZnX0Y0NjFyS3NkLiZtaW1lX3R5cGU9dmlkZW9fbXA0JnFzPTAmcmM9TzJabU9XZGxPalEyT21abWFXbHBOMEJwTXpwcGRYTTVjblJwZURNemFUY3pORUEyWGpKZ0xXRXRYakF4TkdGaVkyTmhZU05qY1dCak1tUmpZbTFnTFMxa01USnpjdyUzRCUzRCZ2dnBsPTEmbD0yMDI1MDMwMjAyMzMyOTA5QUI4MUZGNkQ3NkI0NERFN0FFJmJ0YWc9ZTAwMGJkMDAw HTTP/1.1" 200 1450877
+2025-03-01 19:33:17,927 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:33:17,927 - tiktok_downloader - INFO - Successfully downloaded video using v1 method, returning 1450877 bytes
+2025-03-01 19:33:40,635 - tiktok_downloader - INFO - Starting v1 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:40,635 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:40,636 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:33:40,636 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:33:40,636 - tiktok_downloader - DEBUG - Making initial request to tmate.cc
+2025-03-01 19:33:40,637 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tmate.cc:443
+2025-03-01 19:33:40,742 - urllib3.connectionpool - DEBUG - https://tmate.cc:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:33:40,759 - tiktok_downloader - DEBUG - Obtained token: b5525781e6aff594b9bc6aac6e8a0294
+2025-03-01 19:33:40,760 - tiktok_downloader - DEBUG - Submitting URL to tmate.cc: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:41,417 - urllib3.connectionpool - DEBUG - https://tmate.cc:443 "POST /action HTTP/1.1" 200 None
+2025-03-01 19:33:41,420 - tiktok_downloader - DEBUG - Found download link: https://tikcdn.app/2LHYsdii2KLaqtmK2LIgfCDwnZCR8J2QgPCdkIrwnZCE8J2QmfCfpoc=/dl/aHR0cHM6Ly92NDUudGlrdG9rY2RuLWV1LmNvbS9kYzhhYWM0Y2JlYzUxNmNjZmI3ZjJkMzAxNDgxYjJiNC82N2M0YTRhMy92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MTIzMyZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0xMyZkcj0wJmVyPTAmbHI9YWxsJm5ldD0wJmNkPTAlN0MwJTdDMCU3QyZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1wZkV0R012dDhabW8weWV6eWI0alZEeEY0NjFyS3NkLiZtaW1lX3R5cGU9dmlkZW9fbXA0JnFzPTAmcmM9TzJabU9XZGxPalEyT21abWFXbHBOMEJwTXpwcGRYTTVjblJwZURNemFUY3pORUEyWGpKZ0xXRXRYakF4TkdGaVkyTmhZU05qY1dCak1tUmpZbTFnTFMxa01USnpjdyUzRCUzRCZ2dnBsPTEmbD0yMDI1MDMwMjAyMzM1MzFDQzI1RTJCQkVBQzgxNEZDMDRFJmJ0YWc9ZTAwMGJkMDAw
+2025-03-01 19:33:41,420 - tiktok_downloader - DEBUG - Downloading video content
+2025-03-01 19:33:41,422 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tikcdn.app:443
+2025-03-01 19:33:41,897 - urllib3.connectionpool - DEBUG - https://tikcdn.app:443 "GET /2LHYsdii2KLaqtmK2LIgfCDwnZCR8J2QgPCdkIrwnZCE8J2QmfCfpoc=/dl/aHR0cHM6Ly92NDUudGlrdG9rY2RuLWV1LmNvbS9kYzhhYWM0Y2JlYzUxNmNjZmI3ZjJkMzAxNDgxYjJiNC82N2M0YTRhMy92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MTIzMyZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0xMyZkcj0wJmVyPTAmbHI9YWxsJm5ldD0wJmNkPTAlN0MwJTdDMCU3QyZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1wZkV0R012dDhabW8weWV6eWI0alZEeEY0NjFyS3NkLiZtaW1lX3R5cGU9dmlkZW9fbXA0JnFzPTAmcmM9TzJabU9XZGxPalEyT21abWFXbHBOMEJwTXpwcGRYTTVjblJwZURNemFUY3pORUEyWGpKZ0xXRXRYakF4TkdGaVkyTmhZU05qY1dCak1tUmpZbTFnTFMxa01USnpjdyUzRCUzRCZ2dnBsPTEmbD0yMDI1MDMwMjAyMzM1MzFDQzI1RTJCQkVBQzgxNEZDMDRFJmJ0YWc9ZTAwMGJkMDAw HTTP/1.1" 200 1450877
+2025-03-01 19:33:41,897 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:33:41,897 - tiktok_downloader - INFO - Successfully downloaded video using v1 method, returning 1450877 bytes
+2025-03-01 19:33:56,047 - tiktok_downloader - INFO - Starting v2 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:56,048 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:56,048 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:33:56,048 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:33:56,048 - tiktok_downloader - DEBUG - Making initial request to musicaldown.com
+2025-03-01 19:33:56,050 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): musicaldown.com:443
+2025-03-01 19:33:56,205 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "GET /en HTTP/1.1" 200 None
+2025-03-01 19:33:56,219 - tiktok_downloader - DEBUG - Obtained tokens: _hrl, _UtNwD=7005e8efea75728438ce1974fc41bfd1
+2025-03-01 19:33:56,219 - tiktok_downloader - DEBUG - Submitting URL to musicaldown.com: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:33:56,788 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "POST /download HTTP/1.1" 200 None
+2025-03-01 19:33:56,801 - tiktok_downloader - DEBUG - Found download link using selector /html/body/div[2]/div/div[2]/div[2]/a[1]/@href: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC82MmJkMWMxZTg1ZjBlOTE4YTczMDMyOTkzYjM5MTA5Mi82N2MzYTc5Mi92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJpa1dtSjN3VVg3M3lLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDA3RjhGRkU2MzYwODIyREY5NkM2QTYmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:33:56,802 - tiktok_downloader - DEBUG - Downloading video from: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC82MmJkMWMxZTg1ZjBlOTE4YTczMDMyOTkzYjM5MTA5Mi82N2MzYTc5Mi92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJpa1dtSjN3VVg3M3lLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDA3RjhGRkU2MzYwODIyREY5NkM2QTYmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:33:56,804 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): fastdl.muscdn.app:443
+2025-03-01 19:33:57,124 - urllib3.connectionpool - DEBUG - https://fastdl.muscdn.app:443 "GET /YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC82MmJkMWMxZTg1ZjBlOTE4YTczMDMyOTkzYjM5MTA5Mi82N2MzYTc5Mi92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJpa1dtSjN3VVg3M3lLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDA3RjhGRkU2MzYwODIyREY5NkM2QTYmYnRhZz1lMDAwYjgwMDA= HTTP/1.1" 200 1450877
+2025-03-01 19:33:57,124 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:33:57,124 - tiktok_downloader - INFO - Successfully downloaded video using v2 method, returning 1450877 bytes
+2025-03-01 19:34:07,795 - tiktok_downloader - INFO - Starting v3 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:34:07,795 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:34:07,796 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:34:07,796 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:34:07,796 - tiktok_downloader - DEBUG - Making initial request to tiktokio.com
+2025-03-01 19:34:07,798 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tiktokio.com:443
+2025-03-01 19:34:07,920 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:34:07,943 - tiktok_downloader - DEBUG - Obtained prefix: dtGslxrcdcG9raW8uY29t
+2025-03-01 19:34:07,944 - tiktok_downloader - DEBUG - Submitting URL to tiktokio.com API: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:34:08,990 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "POST /api/v1/tk-htmx HTTP/1.1" 200 None
+2025-03-01 19:34:09,003 - tiktok_downloader - DEBUG - Found download link: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:34:09,003 - tiktok_downloader - DEBUG - Downloading video from: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:34:09,005 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dl.tiktokio.com:443
+2025-03-01 19:34:09,196 - urllib3.connectionpool - DEBUG - https://dl.tiktokio.com:443 "GET /download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t HTTP/1.1" 200 1450877
+2025-03-01 19:34:09,196 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:34:09,196 - tiktok_downloader - INFO - Successfully downloaded video using v3 method, returning 1450877 bytes
+2025-03-01 19:35:11,870 - tiktok_downloader - INFO - Starting v3 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:35:11,870 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:35:11,870 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:35:11,870 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:35:11,870 - tiktok_downloader - DEBUG - Making initial request to tiktokio.com
+2025-03-01 19:35:11,872 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tiktokio.com:443
+2025-03-01 19:35:11,946 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:35:11,968 - tiktok_downloader - DEBUG - Obtained prefix: dtGslxrcdcG9raW8uY29t
+2025-03-01 19:35:11,968 - tiktok_downloader - DEBUG - Submitting URL to tiktokio.com API: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:35:12,279 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "POST /api/v1/tk-htmx HTTP/1.1" 200 None
+2025-03-01 19:35:12,287 - tiktok_downloader - DEBUG - Found download link: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:35:12,287 - tiktok_downloader - DEBUG - Downloading video from: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:35:12,289 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dl.tiktokio.com:443
+2025-03-01 19:35:12,353 - urllib3.connectionpool - DEBUG - https://dl.tiktokio.com:443 "GET /download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t HTTP/1.1" 200 1450877
+2025-03-01 19:35:12,353 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:35:12,353 - tiktok_downloader - INFO - Successfully downloaded video using v3 method, returning 1450877 bytes
+2025-03-01 19:35:26,492 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:36:35,429 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:36:39,017 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:39,017 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:39,017 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:36:39,017 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:36:39,018 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:36:39,021 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:36:39,131 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:36:39,148 - tiktok_downloader - ERROR - Could not find tt token in ssstik.io page
+2025-03-01 19:36:39,148 - tiktok_downloader - ERROR - HTTP exception in v4 method: Could not find tt token
+2025-03-01 19:36:46,048 - tiktok_downloader - INFO - Starting v3 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:46,048 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:46,048 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:36:46,048 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:36:46,049 - tiktok_downloader - DEBUG - Making initial request to tiktokio.com
+2025-03-01 19:36:46,051 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): tiktokio.com:443
+2025-03-01 19:36:46,135 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:36:46,168 - tiktok_downloader - DEBUG - Obtained prefix: dtGslxrcdcG9raW8uY29t
+2025-03-01 19:36:46,168 - tiktok_downloader - DEBUG - Submitting URL to tiktokio.com API: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:46,498 - urllib3.connectionpool - DEBUG - https://tiktokio.com:443 "POST /api/v1/tk-htmx HTTP/1.1" 200 None
+2025-03-01 19:36:46,575 - tiktok_downloader - DEBUG - Found download link: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:36:46,576 - tiktok_downloader - DEBUG - Downloading video from: https://dl.tiktokio.com/download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t
+2025-03-01 19:36:46,578 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dl.tiktokio.com:443
+2025-03-01 19:36:46,655 - urllib3.connectionpool - DEBUG - https://dl.tiktokio.com:443 "GET /download?token=atHsRx0cccHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC83YmIxYjllNmExNGY5YzRjMGQyMTcyZDdiY2U3NTM2OS82N2MzYTc5ZS92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1VCek9UZzdRR282T2paQUwzQWpMVEF6WUNNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTJQa1dtSjN3VVdySXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTgzNDE5NEFDMkY2MTE0OUU3Qzg5QUE0OTImYnRhZz1lMDAwYjgwMDAxNzQwODU0MDYw&p=dtGslxrcdcG9raW8uY29t HTTP/1.1" 200 1450877
+2025-03-01 19:36:46,656 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:36:46,656 - tiktok_downloader - INFO - Successfully downloaded video using v3 method, returning 1450877 bytes
+2025-03-01 19:36:50,178 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:50,179 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:36:50,179 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:36:50,179 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:36:50,179 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:36:50,181 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:36:50,257 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:36:50,273 - tiktok_downloader - ERROR - Could not find tt token in ssstik.io page
+2025-03-01 19:36:50,273 - tiktok_downloader - ERROR - HTTP exception in v4 method: Could not find tt token
+2025-03-01 19:37:51,557 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:37:54,608 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:37:54,608 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:37:54,608 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:37:54,608 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:37:54,608 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:37:54,612 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:37:54,703 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:37:54,704 - tiktok_downloader - DEBUG - Submitting data to ssstik.io: id=https%3A%2F%2Fwww.tiktok.com%2F@ad517ad%2Fvideo%2F7472307384275209502%3Fis_from_webapp%3D1&sender_device%3Dpc&locale=en
+2025-03-01 19:37:54,804 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "POST /abc?url=dl HTTP/1.1" 200 None
+2025-03-01 19:37:54,804 - tiktok_downloader - DEBUG - Parsing response to find download link
+2025-03-01 19:37:54,805 - tiktok_downloader - ERROR - Could not find 'Without watermark' download link in response
+2025-03-01 19:37:54,805 - tiktok_downloader - DEBUG - Response content: 
+2025-03-01 19:37:54,805 - tiktok_downloader - ERROR - HTTP exception in v4 method: Could not find download link
+2025-03-01 19:39:28,158 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:39:30,612 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:39:30,612 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:39:30,613 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:39:30,613 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:39:30,613 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:39:30,616 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:39:30,706 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:39:30,723 - tiktok_downloader - DEBUG - Submitting data to ssstik.io: id=https%3A%2F%2Fwww.tiktok.com%2F@ad517ad%2Fvideo%2F7472307384275209502%3Fis_from_webapp%3D1&sender_device%3Dpc&locale=en
+2025-03-01 19:39:30,831 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "POST /abc?url=dl HTTP/1.1" 200 None
+2025-03-01 19:39:30,831 - tiktok_downloader - DEBUG - response: 
+2025-03-01 19:39:30,831 - tiktok_downloader - DEBUG - Parsing response to find download link
+2025-03-01 19:39:30,832 - tiktok_downloader - ERROR - Could not find 'Without watermark' download link in response
+2025-03-01 19:39:30,832 - tiktok_downloader - DEBUG - Response content: 
+2025-03-01 19:39:30,832 - tiktok_downloader - ERROR - HTTP exception in v4 method: Could not find download link
+2025-03-01 19:40:37,388 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:40:38,936 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:40:38,936 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:40:38,937 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:40:38,937 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:40:38,937 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:40:38,941 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:40:39,053 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:40:39,070 - tiktok_downloader - DEBUG - Submitting data to ssstik.io: id=https%3A%2F%2Fwww.tiktok.com%2F@ad517ad%2Fvideo%2F7472307384275209502%3Fis_from_webapp%3D1&sender_device%3Dpc&locale=en
+2025-03-01 19:40:39,070 - tiktok_downloader - ERROR - Error in v4 method: Session.post() got multiple values for argument 'url'
+2025-03-01 19:40:39,071 - tiktok_downloader - DEBUG - Traceback: Traceback (most recent call last):
+  File "O:\Aplica\tiktok-api\app.py", line 553, in download_v4
+    response = s.post(download_url, headers=headers, url=data)
+TypeError: Session.post() got multiple values for argument 'url'
+
+2025-03-01 19:42:37,767 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:42:43,288 - tiktok_downloader - INFO - Starting v4 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:42:43,288 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:42:43,289 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:42:43,289 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:42:43,289 - tiktok_downloader - DEBUG - Making initial request to ssstik.io
+2025-03-01 19:42:43,293 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ssstik.io:443
+2025-03-01 19:42:43,419 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "GET / HTTP/1.1" 200 None
+2025-03-01 19:42:43,437 - tiktok_downloader - DEBUG - Submitting data to ssstik.io: id=https%3A%2F%2Fwww.tiktok.com%2F@ad517ad%2Fvideo%2F7472307384275209502%3Fis_from_webapp%3D1&sender_device%3Dpc&locale=en&tt=eFdUbUxi
+2025-03-01 19:42:43,569 - urllib3.connectionpool - DEBUG - https://ssstik.io:443 "POST /abc?url=dl HTTP/1.1" 200 None
+2025-03-01 19:42:43,569 - tiktok_downloader - DEBUG - response: 
+2025-03-01 19:42:43,569 - tiktok_downloader - DEBUG - Parsing response to find download link
+2025-03-01 19:42:43,570 - tiktok_downloader - ERROR - Could not find 'Without watermark' download link in response
+2025-03-01 19:42:43,570 - tiktok_downloader - DEBUG - Response content: 
+2025-03-01 19:42:43,570 - tiktok_downloader - ERROR - HTTP exception in v4 method: Could not find download link
+2025-03-01 19:43:29,128 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-01 19:43:36,499 - tiktok_downloader - INFO - Received download request for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:43:36,499 - tiktok_downloader - INFO - Trying download method: download_v2
+2025-03-01 19:43:36,499 - tiktok_downloader - INFO - Starting v2 download method for URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:43:36,499 - tiktok_downloader - INFO - Extracting video ID from URL: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:43:36,500 - tiktok_downloader - INFO - Extracted username: @ad517ad
+2025-03-01 19:43:36,500 - tiktok_downloader - INFO - Extracted content type: video, video ID: 7472307384275209502
+2025-03-01 19:43:36,501 - tiktok_downloader - DEBUG - Making initial request to musicaldown.com
+2025-03-01 19:43:36,504 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): musicaldown.com:443
+2025-03-01 19:43:37,233 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "GET /en HTTP/1.1" 200 None
+2025-03-01 19:43:37,262 - tiktok_downloader - DEBUG - Obtained tokens: _KaB, _zbrQI=26c7a674dec5b05921efb58f7c743e55
+2025-03-01 19:43:37,262 - tiktok_downloader - DEBUG - Submitting URL to musicaldown.com: https://www.tiktok.com/@ad517ad/video/7472307384275209502?is_from_webapp=1&sender_device=pc
+2025-03-01 19:43:37,987 - urllib3.connectionpool - DEBUG - https://musicaldown.com:443 "POST /download HTTP/1.1" 200 None
+2025-03-01 19:43:38,076 - tiktok_downloader - DEBUG - Found download link using selector /html/body/div[2]/div/div[2]/div[2]/a[1]/@href: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC8yNDBkYjU3MTUyMGMzNTg3Yjg0NGU5NjA3OTM5NjliMC82N2MzYTlkNy92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1RnN1FHbzVRSE02T2paQUxUQXpZQ012Y0NNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI5TVdtSjN3VUs5QXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTg0MzQ4OTYxMjIyOUQzOThFRjk5NTZCQzgmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:43:38,076 - tiktok_downloader - DEBUG - Downloading video from: https://fastdl.muscdn.app/YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC8yNDBkYjU3MTUyMGMzNTg3Yjg0NGU5NjA3OTM5NjliMC82N2MzYTlkNy92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1RnN1FHbzVRSE02T2paQUxUQXpZQ012Y0NNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI5TVdtSjN3VUs5QXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTg0MzQ4OTYxMjIyOUQzOThFRjk5NTZCQzgmYnRhZz1lMDAwYjgwMDA=
+2025-03-01 19:43:38,078 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): fastdl.muscdn.app:443
+2025-03-01 19:43:38,790 - urllib3.connectionpool - DEBUG - https://fastdl.muscdn.app:443 "GET /YWQ1MTdhZA==/dl/aHR0cHM6Ly92MTZtLWRlZmF1bHQuYWthbWFpemVkLm5ldC8yNDBkYjU3MTUyMGMzNTg3Yjg0NGU5NjA3OTM5NjliMC82N2MzYTlkNy92aWRlby90b3MvbWFsaXZhL3Rvcy1tYWxpdmEtdmUtMDA2OGM3OTktdXMvb0VmYlFFS2VnQXhJUUZNOENJV0dlZ09BbFQzR3lMbDdlbzllSGkvP2E9MCZidGk9T1RnN1FHbzVRSE02T2paQUxUQXpZQ012Y0NNeE5ETmcmY2g9MCZjcj0wJmRyPTAmZXI9MCZscj1hbGwmbmV0PTAmY2Q9MCU3QzAlN0MwJTdDMCZjdj0xJmJyPTExOTgmYnQ9NTk5JmNzPTAmZHM9NiZmdD1YRTViQ3FUMG03alBEMTI5TVdtSjN3VUs5QXlLTWVGfk81Jm1pbWVfdHlwZT12aWRlb19tcDQmcXM9MCZyYz1PMlptT1dkbE9qUTJPbVptYVdscE4wQnBNenBwZFhNNWNuUnBlRE16YVRjek5FQTJYakpnTFdFdFhqQXhOR0ZpWTJOaFlTTmpjV0JqTW1SalltMWdMUzFrTVRKemN3JTNEJTNEJnZ2cGw9MSZsPTIwMjUwMzAxMTg0MzQ4OTYxMjIyOUQzOThFRjk5NTZCQzgmYnRhZz1lMDAwYjgwMDA= HTTP/1.1" 200 1450877
+2025-03-01 19:43:38,790 - tiktok_downloader - DEBUG - Video content length: 1450877 bytes
+2025-03-01 19:43:38,790 - tiktok_downloader - INFO - Successfully downloaded video using v2 method, returning 1450877 bytes

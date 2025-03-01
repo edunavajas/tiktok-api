@@ -98,20 +98,6 @@ def extract_video_id(url):
     
     return username, video_id, content_type
 
-@app.get("/")
-def read_root():
-    """API welcome message with usage instructions"""
-    return {
-        "message": "TikTok Video Downloader API",
-        "endpoints": {
-            "/download": "Download TikTok video (default: v2 method)",
-            "/download/v1": "Download using tmate.cc method",
-            "/download/v2": "Download using musicaldown.com method (default)",
-            "/download/v3": "Download using tiktokio.com method"
-        },
-        "usage": "Send a GET request with the TikTok URL as a query parameter: /download?url=https://www.tiktok.com/@username/video/1234567890"
-    }
-
 @app.get("/download")
 async def download_video(url: str = Query(..., description="TikTok video URL")):
     """Download TikTok video using multiple methods, trying each until one works"""
@@ -138,21 +124,6 @@ async def download_video(url: str = Query(..., description="TikTok video URL")):
         logger.error(error_details)
         logger.debug(f"Traceback: {traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=error_details)
-
-@app.get("/download/v1")
-async def download_video_v1(url: str = Query(..., description="TikTok video URL")):
-    """Download TikTok video using the v1 method (tmate.cc)"""
-    return await download_v1(url)
-
-@app.get("/download/v2")
-async def download_video_v2(url: str = Query(..., description="TikTok video URL")):
-    """Download TikTok video using the v2 method (musicaldown.com)"""
-    return await download_v2(url)
-
-@app.get("/download/v3")
-async def download_video_v3(url: str = Query(..., description="TikTok video URL")):
-    """Download TikTok video using the v3 method (tiktokio.com)"""
-    return await download_v3(url)
 
 async def download_v1(url: str):
     """Download TikTok video using tmate.cc (v1 method)"""
@@ -250,7 +221,9 @@ async def download_v1(url: str):
                 io.BytesIO(video_response.content),
                 media_type="video/mp4",
                 headers={
-                    "Content-Disposition": f'attachment; filename="tiktok_{video_id}.mp4"'
+                    "Content-Disposition": f'attachment; filename="tiktok_{video_id}.mp4"',
+                    "Content-Length": str(len(response.content)),
+                    "Accept-Ranges": "bytes"
                 }
             )
     
