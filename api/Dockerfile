@@ -12,8 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN ls -la
-
 ENV PYTHONPATH=/app
 
 EXPOSE 8006
