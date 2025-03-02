@@ -7,8 +7,7 @@ from parsel import Selector
 import re
 import io
 import os
-import uuid
-import logging
+import uuid 
 import traceback
 from dotenv import load_dotenv
 
@@ -20,20 +19,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configure logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler()
-    ]
-)
-
 API_KEY = os.getenv("API_KEY")
 if not API_KEY:
     raise RuntimeError("❌ ERROR: API_KEY no está definida. La API no puede arrancar.")
 else:
-    print(f"✅ API_KEY cargada correctamente: {API_KEY}")
+    print(f"✅ API_KEY cargada correctamente")
 
 api_key_header = APIKeyHeader(name="X-API-Key")
 
@@ -44,8 +34,6 @@ async def get_api_key(api_key_header: str = Security(api_key_header)):
             detail="Could not validate API key"
         )
     return api_key_header
-
-logger = logging.getLogger("tiktok_downloader")
 
 # Create a directory for temporary storage if needed
 os.makedirs("temp_videos", exist_ok=True)
@@ -65,7 +53,7 @@ async def download_video(url: str = Query(..., description="TikTok video URL"),
                          api_key: str = Depends(get_api_key)
 ):
     """Download TikTok video using multiple methods, trying each until one works"""
-    logger.info(f"Received download request for URL: {url}")
+    print(f"Received download request for URL: {url}")
     
     # Try each method in sequence until one works
     methods = [download_v2, download_v3, download_v1]
@@ -73,7 +61,7 @@ async def download_video(url: str = Query(..., description="TikTok video URL"),
     
     for method in methods:
         try:
-            logger.info(f"Trying download method: {method.__name__}")
+            print(f"Trying download method: {method.__name__}")
             return await method(url)
         except Exception as e:
             logger.warning(f"Method {method.__name__} failed: {str(e)}")
@@ -91,15 +79,15 @@ async def download_video(url: str = Query(..., description="TikTok video URL"),
 
 def extract_video_id(url):
     """Extract username and video ID from a TikTok URL"""
-    logger.info(f"Extracting video ID from URL: {url}")
+    print(f"Extracting video ID from URL: {url}")
     
     # Handle shortened URLs
     if 'vm.tiktok.com' in url or 'vt.tiktok.com' in url:
-        logger.info("Detected shortened URL, following redirect...")
+        print("Detected shortened URL, following redirect...")
         try:
             response = requests.get(url, headers=headers, allow_redirects=True)
             url = response.url
-            logger.info(f"Redirected to: {url}")
+            print(f"Redirected to: {url}")
         except Exception as e:
             logger.error(f"Error following redirect: {str(e)}")
             raise HTTPException(status_code=400, detail=f"Failed to follow redirect: {str(e)}")
@@ -119,7 +107,7 @@ def extract_video_id(url):
         alt_video_id_match = re.search(r"[/=](\d{15,})", url)
         if alt_video_id_match:
             video_id = alt_video_id_match.group(1)
-            logger.info(f"Found video ID using alternative pattern: {video_id}")
+            print(f"Found video ID using alternative pattern: {video_id}")
             
             # Try to extract username or use placeholder
             if username_match:
@@ -135,7 +123,7 @@ def extract_video_id(url):
         raise HTTPException(status_code=400, detail="Could not extract username from URL")
     
     username = username_match.group(0)
-    logger.info(f"Extracted username: {username}")
+    print(f"Extracted username: {username}")
     
     if not content_type_match:
         logger.error(f"Could not extract video ID from URL: {url}")
@@ -143,13 +131,13 @@ def extract_video_id(url):
     
     content_type = content_type_match.group(1)
     video_id = content_type_match.group(2)
-    logger.info(f"Extracted content type: {content_type}, video ID: {video_id}")
+    print(f"Extracted content type: {content_type}, video ID: {video_id}")
     
     return username, video_id, content_type
 
 async def download_v1(url: str):
     """Download TikTok video using tmate.cc (v1 method)"""
-    logger.info(f"Starting v1 download method for URL: {url}")
+    print(f"Starting v1 download method for URL: {url}")
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.4',
@@ -238,7 +226,7 @@ async def download_v1(url: str):
             logger.debug(f"Video content length: {content_length} bytes")
             
             # Create a streaming response with the video content
-            logger.info(f"Successfully downloaded video using v1 method, returning {content_length} bytes")
+            print(f"Successfully downloaded video using v1 method, returning {content_length} bytes")
             return StreamingResponse(
                 io.BytesIO(video_response.content),
                 media_type="video/mp4",
@@ -259,7 +247,7 @@ async def download_v1(url: str):
 
 async def download_v2(url: str):
     """Download TikTok video using musicaldown.com (v2 method)"""
-    logger.info(f"Starting v2 download method for URL: {url}")
+    print(f"Starting v2 download method for URL: {url}")
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0',
@@ -357,7 +345,7 @@ async def download_v2(url: str):
             logger.debug(f"Video content length: {content_length} bytes")
             
             # Create a streaming response with the video content
-            logger.info(f"Successfully downloaded video using v2 method, returning {content_length} bytes")
+            print(f"Successfully downloaded video using v2 method, returning {content_length} bytes")
             return StreamingResponse(
                 io.BytesIO(response.content),
                 media_type="video/mp4",
@@ -376,7 +364,7 @@ async def download_v2(url: str):
 
 async def download_v3(url: str):
     """Download TikTok video using tiktokio.com (v3 method)"""
-    logger.info(f"Starting v3 download method for URL: {url}")
+    print(f"Starting v3 download method for URL: {url}")
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0',
@@ -472,7 +460,7 @@ async def download_v3(url: str):
             logger.debug(f"Video content length: {content_length} bytes")
             
             # Create a streaming response with the video content
-            logger.info(f"Successfully downloaded video using v3 method, returning {content_length} bytes")
+            print(f"Successfully downloaded video using v3 method, returning {content_length} bytes")
             return StreamingResponse(
                 io.BytesIO(response.content),
                 media_type="video/mp4",
