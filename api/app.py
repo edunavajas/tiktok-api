@@ -11,7 +11,7 @@ import logging
 import traceback
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 app = FastAPI(
     title="TikTok Video Downloader API",
@@ -28,21 +28,21 @@ logging.basicConfig(
     ]
 )
 
-API_KEY = os.getenv("API_KEY")
-if not API_KEY:
-    raise RuntimeError("❌ ERROR: API_KEY no está definida. La API no puede arrancar.")
-else:
-    print(f"✅ API_KEY cargada correctamente: {API_KEY}")
+#API_KEY = os.getenv("API_KEY")
+#if not API_KEY:
+#    raise RuntimeError("❌ ERROR: API_KEY no está definida. La API no puede arrancar.")
+#else:
+#    print(f"✅ API_KEY cargada correctamente: {API_KEY}")
 
-api_key_header = APIKeyHeader(name="X-API-Key")
-
-async def get_api_key(api_key_header: str = Security(api_key_header)):
-    if api_key_header != API_KEY:
-        raise HTTPException(
-            status_code=403,
-            detail="Could not validate API key"
-        )
-    return api_key_header
+#api_key_header = APIKeyHeader(name="X-API-Key")
+#
+#async def get_api_key(api_key_header: str = Security(api_key_header)):
+#    if api_key_header != API_KEY:
+#        raise HTTPException(
+#            status_code=403,
+#            detail="Could not validate API key"
+#        )
+#    return api_key_header
 
 logger = logging.getLogger("tiktok_downloader")
 
@@ -60,8 +60,8 @@ headers = {
 }
 
 @app.get("/download")
-async def download_video(url: str = Query(..., description="TikTok video URL"),
-                         api_key: str = Depends(get_api_key)
+async def download_video(url: str = Query(..., description="TikTok video URL")
+                         #,api_key: str = Depends(get_api_key)
 ):
     """Download TikTok video using multiple methods, trying each until one works"""
     logger.info(f"Received download request for URL: {url}")
