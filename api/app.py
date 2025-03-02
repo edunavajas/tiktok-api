@@ -5,11 +5,9 @@ from parsel import Selector
 import re
 import io
 import os
-import uuid
 import logging
 import traceback
 
-# Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
