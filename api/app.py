@@ -11,6 +11,8 @@ import logging
 import traceback
 from dotenv import load_dotenv
 
+load_dotenv()
+
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
