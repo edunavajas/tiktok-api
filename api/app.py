@@ -10,13 +10,29 @@ import uuid
 import logging
 import traceback
 from dotenv import load_dotenv
+from contextlib import asynccontextmanager
 
 load_dotenv()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    print("🚀 Iniciando aplicación...")
+    
+    global API_KEY
+    API_KEY = os.getenv("API_KEY")
+    
+    if not API_KEY:
+        raise RuntimeError("❌ ERROR: API_KEY no está definida. La API no puede arrancar.")
+    else:
+        print(f"✅ API_KEY cargada correctamente: {API_KEY}")
+    
+    yield
 
 app = FastAPI(
     title="TikTok Video Downloader API",
     description="API for downloading TikTok videos without watermarks",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # Configure logging
@@ -27,12 +43,6 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-
-API_KEY = os.getenv("API_KEY")
-if not API_KEY:
-    raise RuntimeError("❌ ERROR: API_KEY no está definida. La API no puede arrancar.")
-else:
-    print(f"✅ API_KEY cargada correctamente: {API_KEY}")
 
 api_key_header = APIKeyHeader(name="X-API-Key")
 
