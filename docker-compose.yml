@@ -10,4 +10,7 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./temp_videos:/app/temp_videos
+    environment:
+      - LOG_LEVEL=DEBUG
+      - MAX_WORKERS=4  
     restart: unless-stopped
