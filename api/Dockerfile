@@ -16,4 +16,5 @@ ENV PYTHONPATH=/app
 
 EXPOSE 8006
 
-CMD ["python", "-c", "import uvicorn; uvicorn.run('app:app', host='0.0.0.0', port=8006)"]
+#CMD ["python", "-c", "import uvicorn; uvicorn.run('app:app', host='0.0.0.0', port=8006)"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8006"]
