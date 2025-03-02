@@ -1,6 +1,7 @@
-from fastapi import FastAPI, HTTPException, Query, Security, Depends
+from fastapi import FastAPI, HTTPException, Query
+# from fastapi import Security, Depends
 from fastapi.responses import StreamingResponse
-from fastapi.security.api_key import APIKeyHeader
+# from fastapi.security.api_key import APIKeyHeader
 import requests
 from parsel import Selector
 import re
@@ -9,7 +10,7 @@ import os
 import uuid
 import logging
 import traceback
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 #load_dotenv()
 
