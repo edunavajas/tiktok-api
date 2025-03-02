@@ -11,7 +11,6 @@ services:
       - ./logs:/app/logs
       - ./temp_videos:/app/temp_videos
     environment:
-      - API_KEY=${API_KEY}
       - LOG_LEVEL=DEBUG
       - MAX_WORKERS=4  
     restart: unless-stopped
