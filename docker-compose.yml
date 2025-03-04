@@ -1,16 +1,14 @@
 version: '3.8'
 
 services:
-  tiktok-downloader-api:
+  tiktok-api:
     build: 
       context: ./api
-    container_name: tiktok-downloader-api
     ports:
       - "8006:8006"
+    environment:
+      - API_KEY=${API_KEY}
     volumes:
       - ./logs:/app/logs
       - ./temp_videos:/app/temp_videos
-    environment:
-      - LOG_LEVEL=DEBUG
-      - MAX_WORKERS=4
     restart: unless-stopped

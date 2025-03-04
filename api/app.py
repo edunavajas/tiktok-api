@@ -1,5 +1,6 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Security, Depends
 from fastapi.responses import StreamingResponse
+from fastapi.security.api_key import APIKeyHeader
 import requests
 from parsel import Selector
 import re
@@ -7,6 +8,15 @@ import io
 import os
 import logging
 import traceback
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = FastAPI(
+    title="TikTok Video Downloader API",
+    description="API for downloading TikTok videos without watermarks",
+    version="1.0.0"
+)
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -16,13 +26,18 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("tiktok_downloader")
+API_KEY = os.getenv("API_KEY", "")
+api_key_header = APIKeyHeader(name="X-API-Key")
 
-app = FastAPI(
-    title="TikTok Video Downloader API",
-    description="API for downloading TikTok videos without watermarks",
-    version="1.0.0"
-)
+async def get_api_key(api_key_header: str = Security(api_key_header)):
+    if api_key_header != API_KEY:
+        raise HTTPException(
+            status_code=403,
+            detail="Could not validate API key"
+        )
+    return api_key_header
+
+logger = logging.getLogger("tiktok_downloader")
 
 # Create a directory for temporary storage if needed
 os.makedirs("temp_videos", exist_ok=True)
@@ -36,6 +51,33 @@ headers = {
     'Upgrade-Insecure-Requests': '1',
     'Cache-Control': 'max-age=0',
 }
+
+@app.get("/download")
+async def download_video(url: str = Query(..., description="TikTok video URL"), api_key: str = Depends(get_api_key)):
+    """Download TikTok video using multiple methods, trying each until one works"""
+    logger.info(f"Received download request for URL: {url}")
+    
+    # Try each method in sequence until one works
+    methods = [download_v2, download_v3, download_v1]
+    last_error = None
+    
+    for method in methods:
+        try:
+            logger.info(f"Trying download method: {method.__name__}")
+            return await method(url)
+        except Exception as e:
+            logger.warning(f"Method {method.__name__} failed: {str(e)}")
+            last_error = e
+    
+    # If we got here, all methods failed
+    logger.error(f"All download methods failed for URL: {url}")
+    if isinstance(last_error, HTTPException):
+        raise last_error
+    else:
+        error_details = f"All download methods failed. Last error: {str(last_error)}"
+        logger.error(error_details)
+        logger.debug(f"Traceback: {traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=error_details)
 
 def extract_video_id(url):
     """Extract username and video ID from a TikTok URL"""
@@ -94,33 +136,6 @@ def extract_video_id(url):
     logger.info(f"Extracted content type: {content_type}, video ID: {video_id}")
     
     return username, video_id, content_type
-
-@app.get("/download")
-async def download_video(url: str = Query(..., description="TikTok video URL")):
-    """Download TikTok video using multiple methods, trying each until one works"""
-    logger.info(f"Received download request for URL: {url}")
-    
-    # Try each method in sequence until one works
-    methods = [download_v2, download_v3, download_v1]
-    last_error = None
-    
-    for method in methods:
-        try:
-            logger.info(f"Trying download method: {method.__name__}")
-            return await method(url)
-        except Exception as e:
-            logger.warning(f"Method {method.__name__} failed: {str(e)}")
-            last_error = e
-    
-    # If we got here, all methods failed
-    logger.error(f"All download methods failed for URL: {url}")
-    if isinstance(last_error, HTTPException):
-        raise last_error
-    else:
-        error_details = f"All download methods failed. Last error: {str(last_error)}"
-        logger.error(error_details)
-        logger.debug(f"Traceback: {traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=error_details)
 
 async def download_v1(url: str):
     """Download TikTok video using tmate.cc (v1 method)"""
