@@ -6,7 +6,6 @@ from parsel import Selector
 import re
 import io
 import os
-import uuid
 import logging
 import traceback
 from dotenv import load_dotenv
@@ -19,7 +18,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
